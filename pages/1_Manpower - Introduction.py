@@ -98,3 +98,19 @@ Uncovering these insights will help assess the sustainability and effectiveness 
 # Footer
 st.markdown("---")
 st.write("Data is based on provided percentages. Replace with actual data for more accuracy.")
+
+
+col1, col2 = st.columns([4, 1])
+with col1:
+    if st.button("< Previous Page"):
+        st.switch_page("Introduction.py")
+
+    # This is the subtitle (not clickable)
+    st.caption("Main Introduction")
+with col2:
+    # This makes "Next Article >" clickable
+    if st.button("Next Page >"):
+        st.switch_page("pages/2_Manpower - Manpower.py")
+
+    # This is the subtitle (not clickable)
+    st.caption("Manpower - Manpower")
