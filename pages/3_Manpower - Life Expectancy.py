@@ -9,7 +9,8 @@ st.set_page_config(
    # page_icon="💰",
     layout="centered"
 )
-
+title = "📊 Healthcare Workforce vs Life Expectancy at 60"
+ylabel = "Life Expectancy at 60 (Years)"
 df = pd.read_csv("data/merged_life_work.csv")
 
 # Ensure relevant columns are numeric
