@@ -52,3 +52,16 @@ Globally, healthcare plays a vital role in economic growth, security, and intern
 *Student ID: 35304835*
 
 """)
+st.markdown("---")
+
+
+
+# Layout: Right-aligned "Next" button with custom class
+col1, col2 = st.columns([9, 1])
+with col2:
+    # This makes "Next Article >" clickable
+    if st.button("Next Page›"):
+        st.switch_page("pages/1_Manpower - Introduction.py")
+
+    # This is the subtitle (not clickable)
+    st.caption("Manpower - Introduction")
