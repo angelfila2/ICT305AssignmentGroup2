@@ -9,24 +9,8 @@ st.set_page_config(
    # page_icon="💰",
     layout="centered"
 )
-# Sidebar: Select Dataset
-dataset_choice = st.sidebar.radio(
-    "📂 Select Dataset:",
-    ["Life Expectancy at Birth", "Life Expectancy at 60"]
-)
 
-# Load the appropriate dataset
-if dataset_choice == "Life Expectancy at Birth":
-    file_path = Path("data/merged_life_work.csv")
-    title = "📊 Healthcare Workforce vs Life Expectancy at Birth"
-    ylabel = "Life Expectancy at Birth (Years)"
-elif dataset_choice == "Life Expectancy at 60":
-    file_path = Path("data/merged_life60_work.csv")
-    title = "📊 Healthcare Workforce vs Life Expectancy at 60"
-    ylabel = "Life Expectancy at 60 (Years)"
-
-# Load the selected dataset
-df = pd.read_csv(file_path)
+df = pd.read_csv("data/merged_life_work.csv")
 
 # Ensure relevant columns are numeric
 df["Total Healthcare Workers per 10,000 Population"] = pd.to_numeric(df["Total Healthcare Workers per 10,000 Population"], errors="coerce")
